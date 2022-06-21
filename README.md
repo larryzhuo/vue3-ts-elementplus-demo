@@ -1,5 +1,9 @@
 # VUE3 + TypeScript + Element Plus UI Demo
 
+- 采用 vue-cli 生成；
+- 支持 UI 组件按需加载；
+- 支持 TypeScript；
+
 ## Project setup
 ```
 npm install
