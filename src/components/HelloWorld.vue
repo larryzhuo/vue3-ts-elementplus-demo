@@ -8,8 +8,7 @@
     </p>
     <h3>Installed CLI Plugins</h3>
     <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
+      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-typescript" target="_blank" rel="noopener">typescript</a></li>
     </ul>
     <h3>Essential Links</h3>
     <ul>
@@ -27,16 +26,27 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <el-button type="primary" @click="btnClick">button</el-button>
   </div>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { ElButton } from 'element-plus';
+
+export default defineComponent({
   name: 'HelloWorld',
+  components: { ElButton },
   props: {
-    msg: String
+    msg: String,
+  },
+  methods: {
+    btnClick: () => {
+      let str:string = 'hello';
+      console.log(`btn click, ${str}`);
+    }
   }
-}
+});
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
